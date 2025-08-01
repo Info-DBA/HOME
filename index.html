@@ -3,84 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DESIGN BUILD ACOUSTICS</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet"/>
-
-  <!-- Tailwind CSS -->
+  <title>DBA Acoustic Environments</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
   <style>
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    body {
+      margin: 0;
+      padding: 0;
     }
 
-    .animate-fade-in-up {
-      animation: fadeInUp 0.8s ease-out forwards;
+    .hero {
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      transition: background-image 1s ease-in-out;
     }
-
-    .animation-delay-200 { animation-delay: 0.2s; }
-    .animation-delay-400 { animation-delay: 0.4s; }
-
-    .transition-opacity { transition: opacity 1s ease-in-out; }
-    .opacity-0 { opacity: 0; }
-    .opacity-100 { opacity: 1; }
-
-    body { font-family: 'Inter', sans-serif; }
-    #hero-headline { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
-<body class="min-h-screen bg-gray-900 text-gray-100">
 
-  <!-- Your complete HTML content has been included here from the provided code. -->
-  <!-- Due to character limits in this space, the full version is loaded into the Canvas where you can review and edit it directly. -->
-  <!-- Please scroll through the Canvas to view the entire filled-out HTML. -->
+<body class="text-white font-sans">
+  <!-- Hero Section -->
+  <section id="hero" class="hero flex items-center justify-center text-center bg-black">
+    <h1 class="text-4xl md:text-6xl font-bold px-4">Create Calm</h1>
+  </section>
 
-  <!-- JavaScript -->
+  <!-- Who We Are Section -->
+  <section class="bg-gray-900 py-12 px-4 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Who We Are</h2>
+    <p class="text-lg max-w-3xl mx-auto">
+      DBA specialises in designing and building architectural acoustic environments that elevate work.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="grid md:grid-cols-3 gap-6 bg-white text-black py-12 px-6">
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <img src="Service1.jpg" alt="Acoustic Wall Panels" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Acoustic Wall Panels</h3>
+        <p>Beautiful, effective solutions to reduce echo and noise in your space.</p>
+      </div>
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <img src="Service2.jpg" alt="Hanging Ceiling Panels" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Hanging Ceiling Panels</h3>
+        <p>Suspended panels that blend into your architecture while improving acoustics.</p>
+      </div>
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <img src="Service3.jpg" alt="Printed Panels" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Printed Panels</h3>
+        <p>Combine custom artwork with acoustic performance for creative environments.</p>
+      </div>
+    </div>
+  </section>
+
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Hero image rotation
+    const hero = document.getElementById("hero");
+    const images = [
+      "Background1.jpg",
+      "Background2.jpg",
+      "Background3.jpg"
+    ];
+    let index = 0;
 
-      document.querySelectorAll('.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+    function updateBackground() {
+      hero.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
 
-          document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('text-purple-400');
-            link.classList.add('text-gray-100');
-          });
-          this.classList.remove('text-gray-100');
-          this.classList.add('text-purple-400');
-        });
-      });
-
-      const backgroundImages = [
-        src="Background 1.jpg",
-        src="Background 3.jpeg",
-        src="Background 2.tif",
-      ];
-      let currentImageIndex = 0;
-      const heroSection = document.getElementById('home');
-      const imageElements = heroSection.querySelectorAll('.hero-bg-image');
-
-      imageElements[currentImageIndex].classList.add('opacity-100');
-
-      setInterval(() => {
-        imageElements[currentImageIndex].classList.remove('opacity-100');
-        imageElements[currentImageIndex].classList.add('opacity-0');
-
-        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-
-        imageElements[currentImageIndex].classList.remove('opacity-0');
-        imageElements[currentImageIndex].classList.add('opacity-100');
-      }, 6000);
+    document.addEventListener("DOMContentLoaded", () => {
+      updateBackground();
+      setInterval(updateBackground, 5000);
     });
   </script>
 </body>
