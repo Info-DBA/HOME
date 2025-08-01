@@ -1,83 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DBA Acoustic Environments</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Build Acoustics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">
+        Create Calm Through Sound
+      </h1>
+      <p class="text-lg max-w-xl mx-auto text-gray-300">
+        DBA specialises in designing and building architectural acoustic
+        environments that elevate work, life, and leisure.
+      </p>
+    </section>
 
-    .hero {
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      transition: background-image 1s ease-in-out;
-    }
-  </style>
-</head>
-
-<body class="text-white font-sans">
-  <!-- Hero Section -->
-  <section id="hero" class="hero flex items-center justify-center text-center bg-black">
-    <h1 class="text-4xl md:text-6xl font-bold px-4">Create Calm</h1>
-  </section>
-
-  <!-- Who We Are Section -->
-  <section class="bg-gray-900 py-12 px-4 text-center">
-    <h2 class="text-3xl font-semibold mb-4">Who We Are</h2>
-    <p class="text-lg max-w-3xl mx-auto">
-      DBA specialises in designing and building architectural acoustic environments that elevate work.
-    </p>
-  </section>
-
-  <!-- Services Section -->
-  <section class="grid md:grid-cols-3 gap-6 bg-white text-black py-12 px-6">
-    <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="Service1.jpg" alt="Acoustic Wall Panels" class="w-full h-64 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Acoustic Wall Panels</h3>
-        <p>Beautiful, effective solutions to reduce echo and noise in your space.</p>
+    <!-- Service Highlights -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 mb-16">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+        <h3 class="text-xl font-bold mb-2">Acoustic Design</h3>
+        <p class="text-gray-300">
+          Tailored solutions for architectural acoustics from concept to
+          completion.
+        </p>
       </div>
-    </div>
-    <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="Service2.jpg" alt="Hanging Ceiling Panels" class="w-full h-64 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Hanging Ceiling Panels</h3>
-        <p>Suspended panels that blend into your architecture while improving acoustics.</p>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+        <h3 class="text-xl font-bold mb-2">Supply & Install</h3>
+        <p class="text-gray-300">
+          High-performance acoustic products, professionally installed.
+        </p>
       </div>
-    </div>
-    <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="Service3.jpg" alt="Printed Panels" class="w-full h-64 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2">Printed Panels</h3>
-        <p>Combine custom artwork with acoustic performance for creative environments.</p>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+        <h3 class="text-xl font-bold mb-2">Consultation</h3>
+        <p class="text-gray-300">
+          Expert advice to help you achieve the perfect sound environment.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    // Hero image rotation
-    const hero = document.getElementById("hero");
-    const images = [
-      "Background1.jpg",
-      "Background2.jpg",
-      "Background3.jpg"
-    ];
-    let index = 0;
+    <!-- Full Services Section -->
+    <section class="px-6 mb-20">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+          <div class="text-purple-400 mb-4">
+            <span class="text-2xl">🔊</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">
+            Acoustic Design & Consultation
+          </h3>
+          <p class="text-gray-300">
+            Expert advice and design for optimal sound environments in any
+            space. From initial concept to detailed plans.
+          </p>
+        </div>
 
-    function updateBackground() {
-      hero.style.backgroundImage = `url('${images[index]}')`;
-      index = (index + 1) % images.length;
-    }
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+          <div class="text-purple-400 mb-4">
+            <span class="text-2xl">✏️</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">Full Design Service</h3>
+          <p class="text-gray-300">
+            Providing detailed CAD drawings bringing your designs to life with
+            clarity and care.
+          </p>
+        </div>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      updateBackground();
-      setInterval(updateBackground, 5000);
-    });
-  </script>
-</body>
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+          <div class="text-purple-400 mb-4">
+            <span class="text-2xl">📈</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">
+            Soundproofing & Noise Control
+          </h3>
+          <p class="text-gray-300">
+            Effective solutions to minimize unwanted noise and enhance privacy
+            in residential and commercial properties.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+          <div class="text-purple-400 mb-4">
+            <span class="text-2xl">📦</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">
+            Acoustic Product Supply & Installation
+          </h3>
+          <p class="text-gray-300">
+            High-quality acoustic panels, and other materials supplied and
+            professionally installed. We provide a client-centred installation
+            service. Our installers are trained experts in the installation of
+            acoustic products and treatments.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+          <div class="text-purple-400 mb-4">
+            <span class="text-2xl">🎛️</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">
+            Room Acoustics Optimization
+          </h3>
+          <p class="text-gray-300">
+            Tailored treatments to improve sound clarity and reduce echo in
+            recording studios, home theaters, and offices.
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
+          <div class="text-purple-400 mb-4">
+            <span class="text-2xl">🏢</span>
+          </div>
+          <h3 class="text-lg font-bold mb-2">
+            Commercial & Residential Solutions
+          </h3>
+          <p class="text-gray-300">
+            Customized acoustic solutions for a wide range of applications, from
+            small homes to large commercial complexes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="bg-gray-800 text-white py-16 px-6 text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="text-lg mb-8">
+        Ready to transform your space with superior acoustics? Contact us today
+        for a free consultation and let's discuss your project.
+      </p>
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-4 mb-6"
+      >
+        <a
+          href="tel:07956839366"
+          class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
+        >
+          📞 07956839366
+        </a>
+        <a
+          href="mailto:info@designbuildacoustics.com"
+          class="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
+        >
+          ✉️ info@designbuildacoustics.com
+        </a>
+      </div>
+      <p class="text-sm text-gray-300 mb-2">
+        📍 45 WARREN LANE STANWAY ESSEX CO3 0LL
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center text-sm py-6">
+      <p>© 2025 DESIGN BUILD ACOUSTICS. All rights reserved.</p>
+      <p>Designed with passion for perfect sound.</p>
+    </footer>
+  </body>
 </html>
