@@ -2,108 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design Build Acoustics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBA Acoustic Environments</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .hero {
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      transition: background-image 1s ease-in-out;
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
 
-  <!-- HEADER (Sticky Navbar) -->
-  <header class="sticky top-0 bg-gray-950 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#home">
-        <img src="images/DBA logol.jpg" alt="DBA Logo" class="h-10">
-      </a>
-      <nav class="space-x-6 text-white text-sm font-medium">
-        <a href="#home" class="hover:text-purple-400">Home</a>
-        <a href="#services" class="hover:text-purple-400">Services</a>
-        <a href="#contact" class="hover:text-purple-400">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="relative h-[60vh] overflow-hidden">
-    <div class="absolute inset-0 animate-fade bg-cover bg-center bg-no-repeat" style="background-image: url('images/hero1.jpg');"></div>
-    <div class="absolute inset-0 opacity-0 animate-fade-delay bg-cover bg-center bg-no-repeat" style="background-image: url('images/hero2.jpg'); animation-delay: 5s;"></div>
-    <div class="absolute inset-0 opacity-0 animate-fade-delay bg-cover bg-center bg-no-repeat" style="background-image: url('images/hero3.jpg'); animation-delay: 10s;"></div>
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <h1 class="text-4xl font-bold text-white">Create Calm</h1>
-    </div>
-    <style>
-      @keyframes fade {
-        0%, 100% { opacity: 1; }
-        33.33%, 66.66% { opacity: 0; }
-      }
-      .animate-fade {
-        animation: fade 15s infinite;
-      }
-      .animate-fade-delay {
-        animation: fade 15s infinite;
-      }
-    </style>
+<body class="text-white font-sans">
+  <!-- Hero Section -->
+  <section id="hero" class="hero flex items-center justify-center text-center bg-black">
+    <h1 class="text-4xl md:text-6xl font-bold px-4">Create Calm</h1>
   </section>
 
-  <!-- WHO WE ARE -->
-  <section class="text-center py-16 px-6">
-    <p class="text-xl max-w-3xl mx-auto">DBA specialises in designing and building architectural acoustic environments that elevate work.</p>
+  <!-- Who We Are Section -->
+  <section class="bg-gray-900 py-12 px-4 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Who We Are</h2>
+    <p class="text-lg max-w-3xl mx-auto">
+      DBA specialises in designing and building architectural acoustic environments that elevate work.
+    </p>
   </section>
 
-  <!-- IMAGE FEATURE TILES -->
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto pb-20">
+  <!-- Services Section -->
+  <section class="grid md:grid-cols-3 gap-6 bg-white text-black py-12 px-6">
     <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="images/acoustic-wall-panels.png" alt="Acoustic Wall Panels" class="w-full object-cover">
+      <img src="Service1.jpg" alt="Acoustic Wall Panels" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Acoustic Wall Panels</h3>
+        <p>Beautiful, effective solutions to reduce echo and noise in your space.</p>
+      </div>
     </div>
     <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="images/hanging-ceiling-panels.png" alt="Hanging Ceiling Panels" class="w-full object-cover">
+      <img src="Service2.jpg" alt="Hanging Ceiling Panels" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Hanging Ceiling Panels</h3>
+        <p>Suspended panels that blend into your architecture while improving acoustics.</p>
+      </div>
     </div>
     <div class="rounded-2xl overflow-hidden shadow-lg">
-      <img src="images/printed-panels.png" alt="Printed Panels" class="w-full object-cover">
+      <img src="Service3.jpg" alt="Printed Panels" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Printed Panels</h3>
+        <p>Combine custom artwork with acoustic performance for creative environments.</p>
+      </div>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="text-center px-6 pt-4 pb-20">
-    <h2 class="text-3xl font-bold mb-10">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-      <!-- Repeat 6 service blocks -->
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
-        <div class="text-purple-400 text-2xl mb-4">🔊</div>
-        <h3 class="text-lg font-bold mb-2">Acoustic Design & Consultation</h3>
-        <p class="text-gray-300">Expert advice and design for optimal sound environments in any space.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
-        <div class="text-purple-400 text-2xl mb-4">✏️</div>
-        <h3 class="text-lg font-bold mb-2">Full Design Service</h3>
-        <p class="text-gray-300">Detailed CAD drawings to bring your design to life.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
-        <div class="text-purple-400 text-2xl mb-4">📈</div>
-        <h3 class="text-lg font-bold mb-2">Soundproofing & Noise Control</h3>
-        <p class="text-gray-300">Minimize unwanted noise and enhance privacy in all settings.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
-        <div class="text-purple-400 text-2xl mb-4">📦</div>
-        <h3 class="text-lg font-bold mb-2">Acoustic Supply & Installation</h3>
-        <p class="text-gray-300">High-quality products supplied and fitted with care.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
-        <div class="text-purple-400 text-2xl mb-4">🎛️</div>
-        <h3 class="text-lg font-bold mb-2">Room Acoustics Optimization</h3>
-        <p class="text-gray-300">Improve sound clarity and reduce echo in any room.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-2xl shadow-md">
-        <div class="text-purple-400 text-2xl mb-4">🏢</div>
-        <h3 class="text-lg font-bold mb-2">Commercial & Residential</h3>
-        <p class="text-gray-300">Solutions tailored to your unique environment.</p>
-      </div>
-    </div>
-  </section>
+  <script>
+    // Hero image rotation
+    const hero = document.getElementById("hero");
+    const images = [
+      "Background1.jpg",
+      "Background2.jpg",
+      "Background3.jpg"
+    ];
+    let index = 0;
+
+    function updateBackground() {
+      hero.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      updateBackground();
+      setInterval(updateBackground, 5000);
+    });
+  </script>
+</body>
+</html>
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="bg-gray-800 py-20 text-center px-4">
