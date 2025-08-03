@@ -2,38 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Design Build Acoustics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DBA</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
+    body {
+      margin: 0;
+      padding: 0;
     }
-  </style>
-</head>
-<body class="bg-gray-900 text-white font-sans">
-
-  <!-- HEADER (Sticky Top Menu Bar with Logo and Nav Links) -->
-  <header class="sticky top-0 bg-gray-950 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-
-        <!-- Logo on the Left -->
-        <div class="flex-shrink-0">
-          <a href="#home">
-            <img src="images/DBA logol.jpg" alt="DBA Logo" class="h-10" />
-          </a>
-        </div>
-
-        <!-- Navigation Links -->
-        <nav class="hidden md:flex space-x-8 text-sm font-medium">
-          <a href="#home" class="text-white hover:text-purple-400">Home</a>
-          <a href="#services" class="text-white hover:text-purple-400">Services</a>
-          <a href="#contact" class="text-white hover:text-purple-400">Contact</a>
-        </nav>
-      </div>
-    </div>
-  </header>
 
     .hero {
       background-size: cover;
@@ -45,21 +21,30 @@
 </head>
 
 <body class="text-white font-sans">
-  <!-- Hero Section -->
+  <nav class="bg-gray-950 p-4 fixed w-full z-10 top-0 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#hero" class="text-2xl font-bold text-white">DBA</a>
+      <div class="space-x-4">
+        <a href="#who-we-are" class="text-gray-300 hover:text-white transition duration-300">Who We Are</a>
+        <a href="#services" class="text-gray-300 hover:text-white transition duration-300">Services</a>
+        <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact Us</a>
+        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full transition duration-300 ml-4">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
   <section id="hero" class="hero flex items-center justify-center text-center bg-black">
     <h1 class="text-4xl md:text-6xl font-bold px-4">Create Calm</h1>
   </section>
 
-  <!-- Who We Are Section -->
-  <section class="bg-gray-900 py-12 px-4 text-center">
+  <section id="who-we-are" class="bg-gray-900 py-12 px-4 text-center">
     <h2 class="text-3xl font-semibold mb-4">Who We Are</h2>
     <p class="text-lg max-w-3xl mx-auto">
       DBA specialises in designing and building architectural acoustic environments that elevate work.
     </p>
   </section>
 
-  <!-- Services Section -->
-  <section class="grid md:grid-cols-3 gap-6 bg-white text-black py-12 px-6">
+  <section id="services" class="grid md:grid-cols-3 gap-6 bg-white text-black py-12 px-6">
     <div class="rounded-2xl overflow-hidden shadow-lg">
       <img src="Service1.jpg" alt="Acoustic Wall Panels" class="w-full h-64 object-cover">
       <div class="p-4">
@@ -83,6 +68,39 @@
     </div>
   </section>
 
+  <section id="contact" class="bg-gray-800 py-12 px-4 text-center">
+    <h2 class="text-3xl font-semibold mb-8">Get in Touch</h2>
+    <p class="text-lg max-w-3xl mx-auto mb-8">
+      Ready to transform your space with superior acoustics? We're here to help! Fill out the form below or reach us directly.
+    </p>
+    <div class="max-w-xl mx-auto bg-gray-700 p-8 rounded-lg shadow-xl">
+      <form class="space-y-6">
+        <div>
+          <label for="name" class="block text-left text-sm font-medium text-gray-200">Name</label>
+          <input type="text" id="name" name="name" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-600 text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+        </div>
+        <div>
+          <label for="email" class="block text-left text-sm font-medium text-gray-200">Email</label>
+          <input type="email" id="email" name="email" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-600 text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500" required>
+        </div>
+        <div>
+          <label for="phone" class="block text-left text-sm font-medium text-gray-200">Phone (Optional)</label>
+          <input type="tel" id="phone" name="phone" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-600 text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <div>
+          <label for="message" class="block text-left text-sm font-medium text-gray-200">Message</label>
+          <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-600 rounded-md shadow-sm bg-gray-600 text-white focus:outline-none focus:ring-blue-500 focus:border-blue-500" required></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300">Send Message</button>
+      </form>
+      <div class="mt-8 text-gray-300">
+        <p>You can also reach us directly at:</p>
+        <p class="mt-2">Email: <a href="mailto:info@dba-acoustics.com" class="text-blue-400 hover:underline">info@dba-acoustics.com</a></p>
+        <p>Phone: <a href="tel:+441234567890" class="text-blue-400 hover:underline">+44 1234 567890</a></p>
+      </div>
+    </div>
+  </section>
+
   <script>
     // Hero image rotation
     const hero = document.getElementById("hero");
@@ -101,37 +119,18 @@
     document.addEventListener("DOMContentLoaded", () => {
       updateBackground();
       setInterval(updateBackground, 5000);
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
     });
   </script>
 </body>
 </html>
-<!-- Contact Section -->
-<section class="bg-gray-800 text-white py-16 px-6 text-center">
-  <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
-  <p class="text-lg mb-8">
-    Ready to transform your space with superior acoustics? Contact us today for a free consultation and let's discuss your project.
-  </p>
-  <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-6">
-    <a href="tel:07956839366" class="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2l1 5H5a2 2 0 00-2 2v6a2 2 0 002 2h2l1 5h2a2 2 0 002-2v-2h2v2a2 2 0 002 2h2l1-5h2a2 2 0 002-2v-6a2 2 0 00-2-2h-2l-1-5h-2a2 2 0 00-2 2v2h-2V5a2 2 0 00-2-2H5z"/>
-      </svg>
-      07956839366
-    </a>
-    <a href="mailto:info@designbuildacoustics.com" class="bg-purple-700 hover:bg-purple-800 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 transition">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path d="M2.94 4.94a.75.75 0 011.06 0L10 10.94l5.999-6a.75.75 0 111.06 1.06l-6.5 6.5a.75.75 0 01-1.06 0l-6.5-6.5a.75.75 0 010-1.06z" />
-      </svg>
-      info@designbuildacoustics.com
-    </a>
-  </div>
-  <p class="text-sm text-gray-300 mb-2">
-    📍 45 Warren Lane, Stanway, Essex CO3 0LL
-  </p>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-400 text-center text-sm py-6">
-  <p>© 2025 DESIGN BUILD ACOUSTICS. All rights reserved.</p>
-  <p>Designed with passion for perfect sound.</p>
-</footer>
